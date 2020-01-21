@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>By Errebi</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <link href="css/styleV5.css" media="all" rel="stylesheet" type="text/css" />
+		 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script>
+			function topFunction() 
+			{
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+			function apriChiudiReadMore(n)
+			{
+				if(document.getElementById('readMoreServizi'+n).style.display=='inline-block')
+				{
+					document.getElementById('readMoreServizi'+n).style.display='none';
+					document.getElementById('btnMinus'+n).style.display='none';
+					document.getElementById('btnPlus'+n).style.display='inline-block';
+				}
+				else
+				{
+					document.getElementById('readMoreServizi'+n).style.display='inline-block';
+					document.getElementById('btnMinus'+n).style.display='inline-block';
+					document.getElementById('btnPlus'+n).style.display='none';
+				}
+			}
+			function apriChiudiReadMoreSmall(n)
+			{
+				if(document.getElementById('readMoreServiziSmall'+n).style.display=='inline-block')
+				{
+					document.getElementById('readMoreServiziSmall'+n).style.display='none';
+				}
+				else
+				{
+					document.getElementById('readMoreServiziSmall'+n).style.display='inline-block';
+				}
+			}
+			function hideSpinner()
+			{
+				setTimeout(function()
+				{ 
+					document.getElementById('containerProgressBar').style.display='none';
+					document.body.style.maxHeight='';
+					document.body.style.overflow='';
+				}, 700);
+			}
+			function goToPage(page)
+			{
+				document.getElementById('hiddenPage').value=page;
+				document.getElementById("formPage").submit();
+			}
+		</script>
+	</head>
+	<body onload="hideSpinner();">
+	<form id="formPage" style="display:none" action="index.php" method="POST">
+		<input type="hidden" value="" name="hiddenPage" id="hiddenPage" />
+	</form>
+		<script>
+			document.body.style.maxHeight='100%';
+			document.body.style.overflow='hidden';
+		</script>
+		<div id="containerProgressBar">
+			<div id="middle">
+				<div id="fasciaProgressBar">
+					<div class="sk-cube-grid">
+						<div class="sk-cube sk-cube1"></div>
+						<div class="sk-cube sk-cube2"></div>
+						<div class="sk-cube sk-cube3"></div>
+						<div class="sk-cube sk-cube4"></div>
+						<div class="sk-cube sk-cube5"></div>
+						<div class="sk-cube sk-cube6"></div>
+						<div class="sk-cube sk-cube7"></div>
+						<div class="sk-cube sk-cube8"></div>
+						<div class="sk-cube sk-cube9"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top">
+		  <div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a href="index.php" onclick="topFunction()" class="w3-bar-item w3-button w3-wide" style="padding:0px"><div id="logo" style="display:block"></div></a>
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small">
+			  <a href="index.php" onclick="topFunction()" class="w3-bar-item w3-button">Homepage</a>
+			  <a href="#" onclick="goToPage('about')" class="w3-bar-item w3-button"> Chi siamo</a>
+			  <a href="servizi.html" class="w3-bar-item w3-button" > Servizi</a>
+			  <a href="news.html" class="w3-bar-item w3-button" > News</a>
+			  <a href="#" onclick="goToPage('contact')" class="w3-bar-item w3-button"> Contatti</a>
+			</div>
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+		</div>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+			<a class="button w3-bar-item" href="javascript:void(0)" onclick="w3_close()" role="button">
+				<span>Chiudi</span>
+				<div class="icon">
+					<i class="fa fa-remove"></i>
+				</div>
+			</a>
+		  <!--<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>-->
+		  <a href="index.php" onclick="w3_close();topFunction()" class="w3-bar-item w3-button">Homepage</a>
+		  <a href="#" onclick="w3_close();goToPage('about')" class="w3-bar-item w3-button">Chi siamo</a>
+		  <a href="servizi.html" onclick="w3_close()" class="w3-bar-item w3-button" >Servizi</a>
+		  <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button" >News</a>
+		  <a href="#" onclick="w3_close();goToPage('contact')" class="w3-bar-item w3-button">Contatti</a>
+		</nav>
+
+		<div class="w3-container" style="padding:100px 16px;min-height:100%" >
+		  <h3 class="w3-center"><u>News</u></h3>
+		  <!--<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">L’azienda è organizzata per fornire le attività citate coinvolgendo appieno il cliente e privilegiando gli scambi di esperienze che sono visti come un principio imprescindibile per la continua innovazione e crescita reciproca. L’azienda è organizzata per fornire le attività citate coinvolgendo appieno il cliente e privilegiando gli scambi di esperienze che sono visti come un principio imprescindibile.</p>
+		  <p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">I rami di attività nei quali spazia l’azienda attualmente sono :</p>-->
+			
+		  <div class="w3-row-padding w3-center" id="newsContainer" >
+			<div class="w3-quarter" id="news1">
+			  <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+			  <p class="w3-large">Passion</p>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+			</div>
+			<div class="w3-quarter">
+			<!--<div class="certificazione"></div>-->
+			<img src="images/certificazione.png">
+			  <p class="w3-large">27/05/2019</p>
+			  <p style="padding:10px 10px;">La By Errebi ha rinnovato il suo certificato UNI EN ISO 9001:2015</p>
+			</div>
+			<div class="w3-quarter">
+			   <!--<div class="certificazione2"></div>-->
+			   <img src="images/certificazione2.png">
+			  <p class="w3-large">By Errebi di Borghese Renato</p>
+			  <p style="padding:10px 10px;">Il 31 maggio 2012 la By Errebi di Borghese Renato ha conseguito la certificazione del sistema di gestione della qualità secondo la norma UNI EN ISO 9001:2008</p>
+			</div>
+			<div style="width:100%;margin-top:80px;float:left;display: block;">
+				<!--<div class="certificazione2"></div>-->
+				<img src="images/bannerFiera.jpg" style="height:250px">
+			   </div>
+			<!--<div class="w3-quarter" id="news4">
+			 <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+			  <p class="w3-large">Support</p>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+			</div>-->
+		  </div>
+			
+			<!-------------------------------------------------------------------->
+			
+		</div>		
+		
+		<!-- Footer -->
+		<footer class="w3-center w3-black w3-padding-64">
+		  <a href="#" onclick="topFunction()" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Top</a>
+		 <br><br><a style="color:white;font-family:'Montserrat',sans-serif;" href="policy.html" title="Privacy policy" class="w3-hover-text-red">Privacy policy</a></p>
+		 <div class="w3-medium w3-section" style="color:gray;font-family:'Montserrat',sans-serif;padding-top:5px;">
+			By Errebi di Borghese Renato<b style="color:white;padding-left:10px;padding-right:10px;">|</b>Via San Marco 31<b style="color:white;padding-left:10px;padding-right:10px;">|</b>33099 Vivaro (PN)</p>
+			<!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>-->
+		  </div>
+		  <p style="color:gray;font-family:'Montserrat',sans-serif;">Powered by <a style="color:white;font-family:'Montserrat',sans-serif;" href="https://www.servizioglobale.it" title="Servizio Globale" target="_blank" class="w3-hover-text-blue">Servizio globale</a></p>
+		</footer>
+		 
+		<!-- Add Google Maps -->
+		<script>
+		// Modal Image Gallery
+		function onClick(element) 
+		{
+		  document.getElementById("img01").src = element.src;
+		  document.getElementById("modal01").style.display = "block";
+		  var captionText = document.getElementById("caption");
+		  captionText.innerHTML = element.alt;
+		}
+
+		var mySidebar = document.getElementById("mySidebar");
+		// Toggle between showing and hiding the sidebar when clicking the menu icon
+		function w3_open() 
+		{
+			if (mySidebar.style.display === 'block') 
+			{
+				mySidebar.style.display = 'none';
+			} 
+			else 
+			{
+				mySidebar.style.display = 'block';
+			}
+		}
+
+		// Close the sidebar with the close button
+		function w3_close() {
+			mySidebar.style.display = "none";
+		}
+		</script>
+		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>-->
+
+		<!--
+		To use this code on your website, get a free API key from Google.
+		Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+		-->
+
+	</body>
+</html>

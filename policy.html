@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>By Errebi</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <link href="css/styleV5.css" media="all" rel="stylesheet" type="text/css" />
+		 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script>
+			function topFunction() 
+			{
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+			function apriChiudiReadMore(n)
+			{
+				if(document.getElementById('readMoreServizi'+n).style.display=='inline-block')
+				{
+					document.getElementById('readMoreServizi'+n).style.display='none';
+					document.getElementById('btnMinus'+n).style.display='none';
+					document.getElementById('btnPlus'+n).style.display='inline-block';
+				}
+				else
+				{
+					document.getElementById('readMoreServizi'+n).style.display='inline-block';
+					document.getElementById('btnMinus'+n).style.display='inline-block';
+					document.getElementById('btnPlus'+n).style.display='none';
+				}
+			}
+			function apriChiudiReadMoreSmall(n)
+			{
+				if(document.getElementById('readMoreServiziSmall'+n).style.display=='inline-block')
+				{
+					document.getElementById('readMoreServiziSmall'+n).style.display='none';
+				}
+				else
+				{
+					document.getElementById('readMoreServiziSmall'+n).style.display='inline-block';
+				}
+			}
+			function hideSpinner()
+			{
+				setTimeout(function()
+				{ 
+					document.getElementById('containerProgressBar').style.display='none';
+					document.body.style.maxHeight='';
+					document.body.style.overflow='';
+				}, 700);
+			}
+			function goToPage(page)
+			{
+				document.getElementById('hiddenPage').value=page;
+				document.getElementById("formPage").submit();
+			}
+		</script>
+	</head>
+	<body onload="hideSpinner();">
+	<form id="formPage" style="display:none" action="index.php" method="POST">
+		<input type="hidden" value="" name="hiddenPage" id="hiddenPage" />
+	</form>
+		<script>
+			document.body.style.maxHeight='100%';
+			document.body.style.overflow='hidden';
+		</script>
+		<div id="containerProgressBar">
+			<div id="middle">
+				<div id="fasciaProgressBar">
+					<div class="sk-cube-grid">
+						<div class="sk-cube sk-cube1"></div>
+						<div class="sk-cube sk-cube2"></div>
+						<div class="sk-cube sk-cube3"></div>
+						<div class="sk-cube sk-cube4"></div>
+						<div class="sk-cube sk-cube5"></div>
+						<div class="sk-cube sk-cube6"></div>
+						<div class="sk-cube sk-cube7"></div>
+						<div class="sk-cube sk-cube8"></div>
+						<div class="sk-cube sk-cube9"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top">
+		  <div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a href="index.php" onclick="topFunction()" class="w3-bar-item w3-button w3-wide" style="padding:0px"><div id="logo" style="display:block"></div></a>
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small">
+			  <a href="index.php" onclick="topFunction()" class="w3-bar-item w3-button">Homepage</a>
+			  <a href="#" onclick="goToPage('about')" class="w3-bar-item w3-button"> Chi siamo</a>
+			  <a href="servizi.html" class="w3-bar-item w3-button" > Servizi</a>
+			  <a href="news.html" class="w3-bar-item w3-button" > News</a>
+			  <a href="#" onclick="goToPage('contact')" class="w3-bar-item w3-button"> Contatti</a>
+			</div>
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			  <i class="fa fa-bars"></i>
+			</a>
+		  </div>
+		</div>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+			<a class="button w3-bar-item" href="javascript:void(0)" onclick="w3_close()" role="button">
+				<span>Chiudi</span>
+				<div class="icon">
+					<i class="fa fa-remove"></i>
+				</div>
+			</a>
+		  <!--<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>-->
+		  <a href="index.php" onclick="w3_close();topFunction()" class="w3-bar-item w3-button">Homepage</a>
+		  <a href="#" onclick="w3_close();goToPage('about')" class="w3-bar-item w3-button">Chi siamo</a>
+		  <a href="servizi.html" onclick="w3_close()" class="w3-bar-item w3-button" >Servizi</a>
+		  <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
+		  <a href="#" onclick="w3_close();goToPage('contact')" class="w3-bar-item w3-button">Contatti</a>
+		</nav>
+
+		<div class="w3-container" style="padding-bottom:50px;padding-top:120px;" >
+			<h3 class="w3-center" >INFORMATIVA AI SENSI DELL' ART. 13 DEL REGOLAMENTO EUROPEO n. 2016/679</h3>
+			<h4 class="w3-center" >(General Data Protection Regulation)</h4>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				<b class="sottotitolo-privacy">1. Titolare del trattamento</b><br>
+				Il Titolare del trattamento è by errebi di Borghese Renato (P.IVA 01361050931), in persona del legale rappresentante pro tempore, con sede legale in Vivaro, via San Marco, 31 www.byerrebi.com, di seguito “il Titolare”.
+				<br>Il Titolare intende fornire all’interessato l’informativa completa sulle finalità e sulle modalità del trattamento dei dati personali.
+				<br><br><b class="sottotitolo-privacy">2. Modalità del trattamento dei dati personali</b><br>
+				I dati personali (es. dati anagrafici, recapito telefonico, email, etc.) sono trattati su supporti informatici o comunque con l’ausilio di strumenti informatizzati o automatizzati nel rispetto delle misure minime di sicurezza e, comunque, in modo da garantire l’integrità, la sicurezza e la riservatezza dei dati stessi.
+				<br><br><b class="sottotitolo-privacy">3. Finalità del trattamento</b><br>
+				Il Titolare tratterà i Suoi dati personali per le seguenti finalità:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:decimal;">
+					<li>svolgimento delle attività contrattuali e precontrattuali</li>
+					<li>adempimenti ad obblighi fiscali o legali</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				I dati personali, altresì, saranno trattati esclusivamente per finalità strettamente connesse e strumentali all’adempimento delle obbligazioni inerenti i predetti punti.
+				<br><br><b class="sottotitolo-privacy">4. Natura del conferimento</b><br>
+				Il conferimento dei Suoi dati per le finalità di cui ai punti 1) e 2) dell’art.3 non richiede alcun consenso formale in quanto propedeutico ed essenziale a qualsiasi rapporto contrattuale o precontrattuale.
+				<br><br><b class="sottotitolo-privacy">5. Destinatari o categoria di destinatari dei dati personali</b><br>
+				I dati personali da Lei conferiti, per le finalità sopra descritte, potranno essere portati a conoscenza di dipendenti e/o collaboratori del Titolare e comunicati ai seguenti soggetti:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:lower-latin;">
+					<li>società terze eventualmente incaricate dal Titolare di provvedere all’esecuzione delle obbligazioni assunte da quest’ultimo per l’attuazione dei trattamenti previsti dalle finalità di cui ai punti 1) e 2) dell’art.3;</li>
+					<li>tutti i soggetti (ivi incluse le Pubbliche Autorità) che hanno diritto di accesso ai dati in forza di provvedimenti normativi o amministrativi;</li>
+					<li>società terze che forniscono servizi di supporto essenziali ai trattamenti ed hanno accesso diretto o indiretto ai Suoi dati;</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				Tutti i collaboratori o fornitori utilizzati dal Titolare per il trattamento dei Suoi dati personali sono stati opportunamente e legalmente autorizzati e responsabilizzati sulle modalità e le finalità dei trattamenti ad essi attribuiti ed agiranno nel rispetto ed in accordo alla presente informativa.
+				<br>I dati personali da Lei conferiti e successivamente trattati in relazione alla gestione del servizio non sono soggetti a diffusione.
+				<br><br><b class="sottotitolo-privacy">6. Tempi di conservazione dei dati</b><br>
+				I Suoi dati personali saranno conservati per i tempi definiti dalla normativa di riferimento, che di seguito si specificano ai sensi dell’art. 13, comma 2, lettera a) GDPR: per le finalità indicate ai punti 1), 2) dell’art.3 per i tempi prescritti dalle leggi vigenti e comunque per un periodo non inferiore ai 10 (dieci) anni
+				<br><br><b class="sottotitolo-privacy">7. Esercizio dei diritti da parte dell’interessato</b><br>
+				Ai sensi degli articoli 13, comma 2, lettere b) e d), 15, 18, 19 e 21 GDPR si informa l’interessato che ha diritto di:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:lower-latin;">
+					<li>Accesso ai dati personali: ottenere la conferma o meno che sia in corso un trattamento di dati che La riguardano e, in tal caso, l’accesso alle seguenti informazioni: le finalità, le categorie di dati, i destinatari, il periodo di conservazione, il diritto di proporre reclamo ad un’autorità di controllo, il diritto di richiedere la rettifica o cancellazione o limitazione del trattamento od opposizione al trattamento stesso nonché l’esistenza di un processo decisionale automatizzato;</li>
+					<li>Richiesta di rettifica o cancellazione degli stessi o limitazione dei trattamenti che La riguardano; per “limitazione” si intende il contrassegno dei dati conservati con l’obiettivo di limitarne il trattamento in futuro;</li>
+					<li>Opposizione al trattamento: opporsi per motivi connessi alla Sua situazione particolare al trattamento di dati per l’esecuzione di un compito di interesse pubblico o per il perseguimento di un legittimo interesse de il Titolare;</li>
+					<li>Portabilità dei dati: nel caso di trattamento automatizzato svolto sulla base del consenso o in esecuzione di un contratto, di ricevere in un formato strutturato, di uso comune e leggibile da dispositivo automatico, i dati che La riguardano; in particolare, i dati Le verranno forniti dal Titolare in formato .xml;</li>
+					<li>Revoca del consenso al trattamento per finalità di marketing, sia diretto che indiretto, ricerche di mercato e profilazione; l'esercizio di tale diritto non pregiudica in alcun modo la liceità dei trattamenti svolti prima della revoca;</li>
+					<li>Proporre reclamo ai sensi dell’art. 77 RGPD all’autorità di controllo competente in base alla Sua residenza abituale, al luogo di lavoro oppure al luogo di violazione dei Suoi diritti; per l’Italia è competente il Garante per la protezione dei dati personali, contattabile tramite i dati di contatto riportati sul sito web http://www.garanteprivacy.it.</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				I predetti diritti potranno essere esercitati inviando apposita richiesta al Titolare del trattamento mediante i canali di contatto indicati all’art. 1 della presente informativa.
+				<br>Le richieste relative all’esercizio dei Suoi diritti saranno evase senza ingiustificato ritardo e, in ogni modo, entro un mese dalla domanda; solo in casi di particolare complessità e del numero di richieste tale termine potrà essere prorogato di ulteriori 2 (due) mesi e ottenere la portabilità dei dati.
+				<br>Si informa specificatamente e separatamente, come richiesto dall’art. 21 GDPR che qualora i dati personali siano trattati per finalità di marketing l’interessato ha diritto di opporsi in qualsiasi momento e che qualora l’interessato si opponga al trattamento, i dati personali non potranno più essere oggetto di trattamento per tali finalità.
+				<br>L’esercizio dei diritti non è soggetto ad alcun vincolo di forma ed è gratuito. L’indirizzo di posta elettronica per l’esercizio dei diritti è commerciale@byerrebi.com.
+			</p>
+		</div>	
+		<div class="w3-container" style="padding-bottom:50px;padding-top:120px;" >
+			<h3 class="w3-center" >PRIVACY POLICY - ART. 13 EUROPEAN REGULATION NR. 2016/679</h3>
+			<h4 class="w3-center" >(General Data Protection Regulation)</h4>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				<b class="sottotitolo-privacy">1. Data controller</b><br>
+				The Data Controller is by errebi di Borghese Renato (VAT IT01361050931), in person of the legal representative pro tempore, with registered office in Vivaro, Via San Marco, 31 www.byerrebi.com, hereinafter "the Holder".
+				<br>The Data Controller intends to provide the data subject with complete information on the purposes and methods of processing personal data.
+				<br><br><b class="sottotitolo-privacy">2. Methods of processing personal data</b><br>
+				Personal data (eg personal data, telephone number, e-mail, etc.) are processed on computer media or in any case with the aid of computerized or automated tools in compliance with the minimum security measures and, in any case, in order to guarantee the integrity, security and confidentiality of the data.
+				<br><br><b class="sottotitolo-privacy">3. Purpose of the processing</b><br>
+				The Data Controller will process your personal data for the following purposes:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:decimal;">
+					<li>performance of contractual and pre-contractual activities</li>
+					<li>compliance with tax or legal obligations</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				Personal data will also be processed exclusively for purposes strictly connected and instrumental to the fulfillment of the obligations inherent to the aforementioned points.
+				<br><br><b class="sottotitolo-privacy">4. Nature of the contribution</b><br>
+				The provision of your data for the purposes referred to in paragraphs 1) and 2) of Article 3 does not require any formal consent as a preliminary and essential to any contractual or pre-contractual relationship.
+				<br><br><b class="sottotitolo-privacy">5. Recipients or category of recipients of personal data</b><br>
+				The personal data you have provided, for the purposes described above, may be brought to the attention of employees and / or collaborators of the Data Controller and communicated to the following subjects:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:lower-latin;">
+					<li>third-party companies possibly appointed by the Owner to provide for the execution of the obligations assumed by the latter for the implementation of the treatments provided for by the purposes set out in points 1) and 2) of Article 3;</li>
+					<li>all subjects (including Public Authorities) who have the right to access data under regulatory or administrative provisions;</li>
+					<li>third-party companies that provide essential support services for processing and have direct or indirect access to your data;</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				All the collaborators or suppliers used by the Data Controller for the processing of your personal data have been appropriately and legally authorized and empowered on the methods and purposes of the treatments attributed to them and will act in compliance with and in accordance with this information.
+				<br>The personal data you have provided and subsequently processed in connection with the management of the service are not subject to disclosure.
+				<br><br><b class="sottotitolo-privacy">6. Data retention times</b><br>
+				Your personal data will be kept for the times defined by the relevant legislation, which are specified below pursuant to art. 13, paragraph 2, letter a) GDPR: 1) for the purposes indicated in points 1), 2) of article 3 for the times prescribed by the laws in force and in any case for a period not less than 10 (ten) years.
+				<br><br><b class="sottotitolo-privacy">7. Exercise of rights by the interested party</b><br>
+				Pursuant to article 13, paragraph 2, letters b) and d), 15, 18, 19 and 21 GDPR, the interested party is informed that he has the right to:
+			</p>
+				<ul class="w3-large" style="width:80%;max-width:80%;margin-left:10%;list-style-type:lower-latin;">
+					<li>Access to personal data: obtain confirmation of whether data concerning you are being processed and, in this case, access to the following information: the purposes, the categories of data, the recipients, the retention period, the right to lodge a complaint with a supervisory authority, the right to request rectification or cancellation or limitation of processing or opposition to the processing itself and the existence of an automated decision-making process;</li>
+					<li>Request for rectification or cancellation of the same or limitation of the processing that concerns you; "limitation" means the marking of data stored with the aim of limiting its processing in the future;</li>
+					<li>Opposition to processing: to oppose for reasons connected with your particular situation to the processing of data for the performance of a task of public interest or for the pursuit of a legitimate interest of the Controller;</li>
+					<li>Data portability: in the case of automated processing carried out on the basis of consent or in execution of a contract, to receive data concerning you in a structured format, commonly used and readable by automatic device; in particular, the data will be provided by the Data Controller in .xml format;</li>
+					<li>Revocation of consent to processing for marketing purposes, both direct and indirect, market research and profiling; the exercise of this right does not prejudice in any way the lawfulness of the processing carried out before the revocation;</li>
+					<li>Propose a claim pursuant to art. 77 RGPD to the competent supervisory authority based on your habitual residence, workplace or place of violation of your rights; for Italy, the Guarantor for the protection of personal data is competent, which can be contacted via the contact details on the website http://www.garanteprivacy.it.</li>
+				</ul>
+			<p class="w3-large w3-left-align" style="width:80%;max-width:80%;margin-left:10%;">
+				The aforementioned rights may be exercised by sending a specific request to the Data Controller through the contact channels indicated in art. 1 of this information.
+				<br>Requests relating to the exercise of your rights will be processed without undue delay and, in any case, within one month of the request; only in cases of particular complexity and in the number of requests, this deadline may be extended by a further 2 (two) months. e) obtaining data portability;
+				<br>We inform you specifically and separately, as required by art. 21 GDPR that if personal data are processed for marketing purposes, the data subject has the right to object at any time and that if the data subject objects to the processing, personal data can no longer be processed for these purposes.
+				<br>The exercise of rights is not subject to any form constraint and is free. The e-mail address for the exercise of rights is commerciale@byerrebi.com.
+			</p>
+		</div>	
+		<!-- Footer -->
+		<footer class="w3-center w3-black w3-padding-64">
+		  <a href="#" onclick="topFunction()" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Top</a>
+		 <br><br><a style="color:white;font-family:'Montserrat',sans-serif;" href="policy.html" title="Privacy policy" class="w3-hover-text-red">Privacy policy</a></p>
+		 <div class="w3-medium w3-section" style="color:gray;font-family:'Montserrat',sans-serif;padding-top:5px;">
+			By Errebi di Borghese Renato<b style="color:white;padding-left:10px;padding-right:10px;">|</b>Via San Marco 31<b style="color:white;padding-left:10px;padding-right:10px;">|</b>33099 Vivaro (PN)</p>
+			<!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>-->
+		  </div>
+		  <p style="color:gray;font-family:'Montserrat',sans-serif;">Powered by <a style="color:white;font-family:'Montserrat',sans-serif;" href="https://www.servizioglobale.it" title="Servizio Globale" target="_blank" class="w3-hover-text-blue">Servizio globale</a></p>
+		</footer>
+		 
+		<!-- Add Google Maps -->
+		<script>
+		// Modal Image Gallery
+		function onClick(element) 
+		{
+		  document.getElementById("img01").src = element.src;
+		  document.getElementById("modal01").style.display = "block";
+		  var captionText = document.getElementById("caption");
+		  captionText.innerHTML = element.alt;
+		}
+
+		var mySidebar = document.getElementById("mySidebar");
+		// Toggle between showing and hiding the sidebar when clicking the menu icon
+		function w3_open() 
+		{
+			if (mySidebar.style.display === 'block') 
+			{
+				mySidebar.style.display = 'none';
+			} 
+			else 
+			{
+				mySidebar.style.display = 'block';
+			}
+		}
+
+		// Close the sidebar with the close button
+		function w3_close() {
+			mySidebar.style.display = "none";
+		}
+		</script>
+		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>-->
+
+		<!--
+		To use this code on your website, get a free API key from Google.
+		Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+		-->
+
+	</body>
+</html>
