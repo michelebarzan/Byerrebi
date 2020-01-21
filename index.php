@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/styleV5.css" />
+		<link rel="stylesheet" href="css/styleV6.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg" />
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Josefin+Slab|Jura|Poiret+One|Yanone+Kaffeesatz" rel="stylesheet">
