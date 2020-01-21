@@ -453,7 +453,8 @@
 				<div class="w3-container">
 				  <h3>Ufficio tecnico</h3>
 				  <p class="w3-opacity" ><a href="mailto:tecnico@byerrebi.com?" class="linkMail" id="mailUfficioTecnico1" target="_top">tecnico@byerrebi.com</a><a href="tel:0427976968" class="linkTel" target="_top">0427 976968</a></p>
-				  <p class="w3-opacity" ><a href="mailto:cad@byerrebi.com?" class="linkMail" target="_top">cad@byerrebi.com</a><a style="float:right" href="tel:0427976969" class="linkTel" target="_top">0427 976969</a></p>
+				  <p class="w3-opacity" ><a href="mailto:tecnico02@byerrebi.com?" class="linkMail" target="_top">tecnico02@byerrebi.com</a><a style="float:right" href="tel:0427976969" class="linkTel" target="_top">0427 976969</a></p>
+				  <p class="w3-opacity" ><a href="mailto:tecnico03@byerrebi.com?" class="linkMail" target="_top">tecnico03@byerrebi.com</a></p>
 				  <!--<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope" onclick="document.getElementById('mailUfficioTecnico1').click();"></i> Contatta</button></p>-->
 				</div>
 			  </div>
